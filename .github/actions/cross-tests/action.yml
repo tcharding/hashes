@@ -28,8 +28,9 @@ runs:
           tar -C /tmp -xzf /tmp/binaries.tar.gz
           mv /tmp/cross ~/.cargo/bin
         shell: bash
-      - run: |
-          cd ${{ inputs.package }}
-          cross test --target ${{ inputs.target }} --no-default-features \
-            --features ${{ inputs.features }}
+      - run: cross test
+          --package ${{ inputs.package }}
+          --target ${{ inputs.target }}
+          --no-default-features
+          --features ${{ inputs.features }}
         shell: bash
