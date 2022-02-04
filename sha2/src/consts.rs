@@ -3,6 +3,7 @@
 pub const STATE_LEN: usize = 8;
 pub const BLOCK_LEN: usize = 16;
 
+/// Holds the inner state during SHA-256 hashing.
 pub type State256 = [u32; STATE_LEN];
 pub type State512 = [u64; STATE_LEN];
 

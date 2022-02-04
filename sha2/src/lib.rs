@@ -71,6 +71,7 @@ pub use sha256::compress256;
 pub use sha512::compress512;
 
 pub use core_api::{Sha256VarCore, Sha512VarCore};
+pub use consts::State256;
 
 /// SHA-224 hasher.
 pub type Sha224 = CoreWrapper<CtVariableCoreWrapper<Sha256VarCore, U28>>;
